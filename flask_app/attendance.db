@@ -1,0 +1,15 @@
+import sqlite3
+
+conn = sqlite3.connect('db/attendance.db')
+c = conn.cursor()
+
+# Create the table
+c.execute('''CREATE TABLE attendance (
+                id INTEGER PRIMARY KEY,
+                student_name TEXT,
+                emotion TEXT,
+                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+              )''')
+
+conn.commit()
+conn.close()

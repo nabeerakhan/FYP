@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+</head>
+<body>
+    <h1>Mark Attendance</h1>
+    
+    <form method="POST" action="/mark_attendance">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required><br><br>
+
+        <label for="emotion">Emotion:</label>
+        <select id="emotion" name="emotion" required>
+            <option value="Happy">Happy</option>
+            <option value="Sad">Sad</option>
+            <option value="Neutral">Neutral</option>
+        </select><br><br>
+
+        <button type="submit">Mark Attendance</button>
+    </form>
+
+    <a href="/report">View Attendance Report</a>
+</body>
+</html>
